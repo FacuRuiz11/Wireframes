@@ -2,109 +2,86 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Formulario PAAC - Revisión</title>
+    <title>Revisión PAAC - Unidad Pedagógica</title>
     <link rel="stylesheet" href="formComentarios.css">
 </head>
 <body>
     <form>
-        <h1>Formulario PAAC - Revisión</h1>
+        <h1>Revisión PAAC - Programa Anual de Actividades de la Cátedra</h1>
 
         <fieldset>
             <legend>Parte A: Aspectos generales</legend>
 
-            <div class="field-group">
-                <label>Sede/Delegación:<input type="text" name="sede" value="Sede Capital"></label>
+            <div class="fixed-field">
+                <strong>Sede/Delegación:</strong> Sede Capital
             </div>
-
-            <div class="field-group">
-                <label>Departamento académico:<input type="text" name="departamento" value="Ciencias Exactas"></label>
+            
+            <div class="fixed-field">
+                <strong>Departamento académico:</strong> Ciencias Exactas
             </div>
-
-            <div class="field-group">
-                <label>Carrera:<input type="text" name="carrera" value="Licenciatura en Sistemas de Información"></label>
+            
+            <div class="fixed-field">
+                <strong>Carrera:</strong> Licenciatura en Sistemas de Información
             </div>
-
-            <div class="field-group with-comment">
-                <label>Plan de estudio ordenanza:<input type="text" name="plan_estudio" value="Ord. 123/2010"></label>
-                <div class="comment-section">
-                    <div class="comment-display">
-                        <strong>Comentario de Planeamiento:</strong>
-                        <p>Por favor verificar que corresponda a la última actualización del plan de estudios (Ord. 456/2022)</p>
-                        <small>Fecha: 15/03/2023</small>
-                    </div>
-                    <button type="button" class="mark-corrected">Marcar como corregido</button>
-                </div>
+            
+            <div class="fixed-field">
+                <strong>Plan de estudio ordenanza:</strong> Ord. 1234/2018
             </div>
-
-            <div class="field-group">
-                <label>Resolución de acreditación CONEAU vigente:<input type="text" name="res_coneau" value="RESFC-2019-1234-APN-CONEAU"></label>
+            
+            <div class="fixed-field">
+                <strong>Resolución de acreditación CONEAU vigente:</strong> Res. 567/2020
             </div>
-
-            <div class="field-group with-comment">
-                <label>Resolución Ministerial N°/Año:<input type="text" name="res_ministerial" value="1234/2020"></label>
-                <div class="comment-section">
-                    <div class="comment-display">
-                        <strong>Comentario de Secretaría Académica:</strong>
-                        <p>Falta adjuntar copia digitalizada de la resolución</p>
-                        <small>Fecha: 20/03/2023</small>
-                    </div>
-                    <button type="button" class="mark-corrected">Marcar como corregido</button>
-                </div>
+            
+            <div class="fixed-field">
+                <strong>Resolución Ministerial N°/Año:</strong> Res. 891/2019
             </div>
-
-            <div class="field-group">
-                <label>Asignatura:<input type="text" name="asignatura" value="Base de Datos"></label>
+            
+            <div class="fixed-field">
+                <strong>Asignatura:</strong> Algoritmos y Estructuras de Datos
             </div>
-
-            <div class="field-group">
-                <label>Curso:<input type="text" name="curso" value="3er Año"></label>
+            
+            <div class="fixed-field">
+                <strong>Curso:</strong> 2° Año
             </div>
-
-            <div class="field-group">
-                <label>Régimen:<input type="text" name="regimen" value="Anual"></label>
+            
+            <div class="fixed-field">
+                <strong>Régimen:</strong> Cuatrimestral
             </div>
 
             <fieldset class="sub">
                 <legend>Equipo de cátedra</legend>
-                <div class="field-group">
-                    <label>Profesor Titular:<input type="text" name="prof_titular" value="Dr. Juan Pérez"></label>
+                <div class="fixed-field">
+                    <strong>Profesor Titular:</strong> Dr. Juan Pérez
                 </div>
-                <div class="field-group">
-                    <label>Profesor Asociado:<input type="text" name="prof_asociado" value="Lic. María Gómez"></label>
+                <div class="fixed-field">
+                    <strong>Profesor Asociado:</strong> Mg. María Gómez
                 </div>
-                <div class="field-group">
-                    <label>Profesor Adjunto:<input type="text" name="prof_adjunto" value="Mg. Carlos López"></label>
+                <div class="fixed-field">
+                    <strong>Profesor Adjunto:</strong> Lic. Carlos Rodríguez
                 </div>
-                <div class="field-group with-comment">
-                    <label>Profesor JTP:<input type="text" name="prof_jtp" value=""></label>
-                    <div class="comment-section">
-                        <div class="comment-display">
-                            <strong>Comentario de RRHH:</strong>
-                            <p>Debe completarse el nombre del JTP asignado o indicar 'A designar'</p>
-                            <small>Fecha: 18/03/2023</small>
-                        </div>
-                        <button type="button" class="mark-corrected">Marcar como corregido</button>
-                    </div>
+                <div class="fixed-field">
+                    <strong>Profesor JTP:</strong> Ing. Laura Fernández
                 </div>
-                <div class="field-group">
-                    <label>Profesor Ayudante:<input type="text" name="prof_ayudante" value="A designar"></label>
+                <div class="fixed-field">
+                    <strong>Profesor Ayudante:</strong> Lic. Pablo Martínez
+                </div>
+                
+                <div class="fixed-field">
+                    <strong>Adscriptos:</strong> Lic. Ana López, Lic. Pedro García
+                </div>
+                
+                <div class="fixed-field">
+                    <strong>Ayudantes Alumnos:</strong> Est. Sofía Martínez, Est. Lucas Díaz
                 </div>
             </fieldset>
 
-            <div class="field-group">
-                <label>Crédito horario:<input type="number" name="credito_horario" value="120"></label>
+            <div class="fixed-field">
+                <strong>Crédito horario:</strong> 120 horas
             </div>
-
-            <div class="field-group with-comment">
-                <label>Contenidos mínimos:<textarea name="contenidos_minimos">Conceptos básicos de bases de datos relacionales. Modelo entidad-relación. SQL. Normalización.</textarea></label>
-                <div class="comment-section">
-                    <div class="comment-display">
-                        <strong>Comentario del Departamento:</strong>
-                        <p>Falta incluir contenidos sobre NoSQL según actualización del plan de estudios</p>
-                        <small>Fecha: 22/03/2023</small>
-                    </div>
-                    <button type="button" class="mark-corrected">Marcar como corregido</button>
-                </div>
+            
+            <div class="fixed-field">
+                <strong>Contenidos mínimos:</strong> 
+                <div>Algoritmos básicos. Estructuras de datos lineales y no lineales. Complejidad algorítmica. Métodos de ordenamiento y búsqueda. Implementación en lenguaje de programación.</div>
             </div>
         </fieldset>
 
@@ -113,95 +90,157 @@
 
             <fieldset class="sub">
                 <legend>a. Introducción</legend>
-                <div class="field-group">
-                    <label>Importancia de la asignatura en el plan de estudios:<textarea name="importancia">Esta asignatura provee las bases fundamentales para el manejo de información en sistemas informáticos.</textarea></label>
-                </div>
-                <div class="field-group with-comment">
-                    <label>Relación con el perfil profesional esperado:<textarea name="perfil_profesional">Los estudiantes aprenderán a diseñar y gestionar bases de datos.</textarea></label>
-                    <div class="comment-section">
-                        <div class="comment-display">
-                            <strong>Comentario de la Comisión de Carrera:</strong>
-                            <p>Ampliar la descripción para incluir competencias específicas mencionadas en el perfil profesional actualizado</p>
-                            <small>Fecha: 25/03/2023</small>
+                <div class="fixed-field">
+                    <strong>Importancia de la asignatura en el plan de estudios:</strong>
+                    <div>Esta asignatura es fundamental en la formación de los estudiantes ya que provee las bases teóricas y prácticas para el desarrollo de software eficiente.</div>
+                    <div class="evaluation-controls">
+                        <button type="button" class="add-comment-btn">Agregar comentario</button>
+                        <button type="button" class="approve-btn">Cumplió</button>
+                        <div class="comment-container hidden">
+                            <textarea class="comment-text" placeholder="Ingrese su comentario..."></textarea>
+                            <button type="button" class="save-comment-btn">Guardar comentario</button>
                         </div>
-                        <button type="button" class="mark-corrected">Marcar como corregido</button>
+                    </div>
+                </div>
+                
+                <div class="fixed-field">
+                    <strong>Relación con el perfil profesional esperado:</strong>
+                    <div>Los conocimientos adquiridos son esenciales para el desempeño profesional en desarrollo de software, análisis de sistemas y gestión de bases de datos.</div>
+                    <div class="evaluation-controls">
+                        <button type="button" class="add-comment-btn">Agregar comentario</button>
+                        <button type="button" class="approve-btn">Cumplió</button>
+                        <div class="comment-container hidden">
+                            <textarea class="comment-text" placeholder="Ingrese su comentario..."></textarea>
+                            <button type="button" class="save-comment-btn">Guardar comentario</button>
+                        </div>
                     </div>
                 </div>
             </fieldset>
 
             <fieldset class="sub">
                 <legend>b. Diagnóstico</legend>
-                <div class="field-group">
-                    <label>Articulación con las asignaturas correlativas:<textarea name="art_correlativas">Esta asignatura requiere conocimientos previos de Algoritmos y Estructuras de Datos.</textarea></label>
-                </div>
-                <div class="field-group with-comment">
-                    <label>Articulación con las materias del mismo año:<textarea name="art_mismo_anio">Se coordinará con Ingeniería de Software para proyectos integradores.</textarea></label>
-                    <div class="comment-section">
-                        <div class="comment-display">
-                            <strong>Comentario de Coordinación:</strong>
-                            <p>Especificar qué aspectos concretos se coordinarán y en qué momentos del año</p>
-                            <small>Fecha: 28/03/2023</small>
+                <div class="fixed-field">
+                    <strong>Articulación con las asignaturas correlativas:</strong>
+                    <div>Se articula con Programación I y Matemática Discreta como correlativas previas, y con Base de Datos como correlativa posterior.</div>
+                    <div class="evaluation-controls">
+                        <button type="button" class="add-comment-btn">Agregar comentario</button>
+                        <button type="button" class="approve-btn">Cumplió</button>
+                        <div class="comment-container hidden">
+                            <textarea class="comment-text" placeholder="Ingrese su comentario..."></textarea>
+                            <button type="button" class="save-comment-btn">Guardar comentario</button>
                         </div>
-                        <button type="button" class="mark-corrected">Marcar como corregido</button>
                     </div>
                 </div>
-                <div class="field-group">
-                    <label>Análisis de los alumnos:<textarea name="analisis_alumnos">Los alumnos suelen tener dificultades con los conceptos de normalización.</textarea></label>
+                
+                <div class="fixed-field">
+                    <strong>Articulación con las materias del mismo año:</strong>
+                    <div>Se coordina con Estructura de Computadores para el uso de lenguajes de programación y con Probabilidad y Estadística para el análisis de complejidad.</div>
+                    <div class="evaluation-controls">
+                        <button type="button" class="add-comment-btn">Agregar comentario</button>
+                        <button type="button" class="approve-btn">Cumplió</button>
+                        <div class="comment-container hidden">
+                            <textarea class="comment-text" placeholder="Ingrese su comentario..."></textarea>
+                            <button type="button" class="save-comment-btn">Guardar comentario</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="field-group">
-                    <label>Infraestructura requerida:<textarea name="infraestructura">Se requiere laboratorio con acceso a gestores de bases de datos.</textarea></label>
+                
+                <div class="fixed-field">
+                    <strong>Análisis de los alumnos:</strong>
+                    <div>Los estudiantes llegan con conocimientos básicos de programación pero requieren reforzar el pensamiento algorítmico y abstracto.</div>
+                    <div class="evaluation-controls">
+                        <button type="button" class="add-comment-btn">Agregar comentario</button>
+                        <button type="button" class="approve-btn">Cumplió</button>
+                        <div class="comment-container hidden">
+                            <textarea class="comment-text" placeholder="Ingrese su comentario..."></textarea>
+                            <button type="button" class="save-comment-btn">Guardar comentario</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="fixed-field">
+                    <strong>Infraestructura requerida:</strong>
+                    <div>Aula con proyector y computadoras para prácticas. Se recomienda acceso a laboratorio de informática para las clases prácticas.</div>
+                    <div class="evaluation-controls">
+                        <button type="button" class="add-comment-btn">Agregar comentario</button>
+                        <button type="button" class="approve-btn">Cumplió</button>
+                        <div class="comment-container hidden">
+                            <textarea class="comment-text" placeholder="Ingrese su comentario..."></textarea>
+                            <button type="button" class="save-comment-btn">Guardar comentario</button>
+                        </div>
+                    </div>
                 </div>
             </fieldset>
         </fieldset>
 
         <fieldset>
             <legend>2. Objetivos</legend>
-            <div class="field-group">
-                <label>Objetivos de la carrera:<textarea name="obj_carrera">Formar profesionales capaces de diseñar y gestionar sistemas de información.</textarea></label>
-            </div>
-            <div class="field-group">
-                <label>Objetivos de la cátedra:<textarea name="obj_catedra">Brindar los fundamentos teóricos y prácticos para el diseño e implementación de bases de datos.</textarea></label>
-            </div>
-            <div class="field-group with-comment">
-                <label>Objetivos específicos:<textarea name="obj_especificos">Que los alumnos puedan diseñar esquemas relacionales normalizados.</textarea></label>
-                <div class="comment-section">
-                    <div class="comment-display">
-                        <strong>Comentario del Área Pedagógica:</strong>
-                        <p>Los objetivos deben ser medibles. Sugiero redactarlos comenzando con verbos en infinitivo y que sean evaluables</p>
-                        <small>Fecha: 30/03/2023</small>
+            <div class="fixed-field">
+                <strong>Objetivos de la carrera:</strong>
+                <div>Formar profesionales capaces de diseñar, implementar y gestionar sistemas de información eficientes y seguros.</div>
+                <div class="evaluation-controls">
+                    <button type="button" class="add-comment-btn">Agregar comentario</button>
+                    <button type="button" class="approve-btn">Cumplió</button>
+                    <div class="comment-container hidden">
+                        <textarea class="comment-text" placeholder="Ingrese su comentario..."></textarea>
+                        <button type="button" class="save-comment-btn">Guardar comentario</button>
                     </div>
-                    <button type="button" class="mark-corrected">Marcar como corregido</button>
+                </div>
+            </div>
+            
+            <div class="fixed-field">
+                <strong>Objetivos de la cátedra:</strong>
+                <div>Que los estudiantes dominen los conceptos fundamentales de algoritmos y estructuras de datos, y sean capaces de aplicarlos en la resolución de problemas.</div>
+                <div class="evaluation-controls">
+                    <button type="button" class="add-comment-btn">Agregar comentario</button>
+                    <button type="button" class="approve-btn">Cumplió</button>
+                    <div class="comment-container hidden">
+                        <textarea class="comment-text" placeholder="Ingrese su comentario..."></textarea>
+                        <button type="button" class="save-comment-btn">Guardar comentario</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="fixed-field">
+                <strong>Objetivos específicos:</strong>
+                <div>1. Comprender los conceptos de complejidad algorítmica. 2. Implementar estructuras de datos básicas. 3. Aplicar algoritmos de ordenamiento y búsqueda.</div>
+                <div class="evaluation-controls">
+                    <button type="button" class="add-comment-btn">Agregar comentario</button>
+                    <button type="button" class="approve-btn">Cumplió</button>
+                    <div class="comment-container hidden">
+                        <textarea class="comment-text" placeholder="Ingrese su comentario..."></textarea>
+                        <button type="button" class="save-comment-btn">Guardar comentario</button>
+                    </div>
                 </div>
             </div>
         </fieldset>
 
         <fieldset>
             <legend>3. Metodología de la enseñanza</legend>
-            <div class="checkbox-group with-comment">
-                <p>Clases:</p>
-                <label><input type="checkbox" name="clases[]" value="teoricas" checked>Teóricas</label>
-                <label><input type="checkbox" name="clases[]" value="practicas" checked>Prácticas</label>
-                <label><input type="checkbox" name="clases[]" value="laboratorio">Laboratorio</label>
-                <div class="comment-section">
-                    <div class="comment-display">
-                        <strong>Comentario de la Comisión de Enseñanza:</strong>
-                        <p>Considerar incluir horas de laboratorio para ejercitación con software específico</p>
-                        <small>Fecha: 01/04/2023</small>
+            <div class="fixed-field">
+                <strong>Clases:</strong>
+                <div>Teóricas, Prácticas, Laboratorio</div>
+                <div class="evaluation-controls">
+                    <button type="button" class="add-comment-btn">Agregar comentario</button>
+                    <button type="button" class="approve-btn">Cumplió</button>
+                    <div class="comment-container hidden">
+                        <textarea class="comment-text" placeholder="Ingrese su comentario..."></textarea>
+                        <button type="button" class="save-comment-btn">Guardar comentario</button>
                     </div>
-                    <button type="button" class="mark-corrected">Marcar como corregido</button>
                 </div>
             </div>
-
-            <div class="checkbox-group">
-                <p>Recursos didácticos:</p>
-                <label><input type="checkbox" name="recursos[]" value="guia_ej" checked>Guía de ejercicios</label>
-                <label><input type="checkbox" name="recursos[]" value="guia_tp" checked>Guía de trabajos prácticos</label>
-                <label><input type="checkbox" name="recursos[]" value="apuntes">Apuntes ad-hoc</label>
-                <label><input type="checkbox" name="recursos[]" value="videos">Videos</label>
-                <label><input type="checkbox" name="recursos[]" value="ppt" checked>Presentaciones</label>
-                <label><input type="checkbox" name="recursos[]" value="biblio" checked>Bibliografía</label>
-                <label><input type="checkbox" name="recursos[]" value="soportes">Soportes informáticos</label>
-                <label><input type="checkbox" name="recursos[]" value="otros">Otros</label>
+            
+            <div class="fixed-field">
+                <strong>Recursos didácticos:</strong>
+                <div>Guía de ejercicios, Guía de trabajos prácticos, Apuntes ad-hoc, Presentaciones, Bibliografía, Plataforma virtual</div>
+                <div class="evaluation-controls">
+                    <button type="button" class="add-comment-btn">Agregar comentario</button>
+                    <button type="button" class="approve-btn">Cumplió</button>
+                    <div class="comment-container hidden">
+                        <textarea class="comment-text" placeholder="Ingrese su comentario..."></textarea>
+                        <button type="button" class="save-comment-btn">Guardar comentario</button>
+                    </div>
+                </div>
             </div>
         </fieldset>
 
@@ -210,32 +249,55 @@
 
             <fieldset class="sub">
                 <legend>1. Contenidos</legend>
-                <div class="field-group">
-                    <label>Unidad 1:<textarea name="unidad1">Introducción a las bases de datos. Modelo relacional.</textarea></label>
-                </div>
-                <div class="field-group with-comment">
-                    <label>Unidad 2:<textarea name="unidad2">Modelo entidad-relación. Diseño conceptual.</textarea></label>
-                    <div class="comment-section">
-                        <div class="comment-display">
-                            <strong>Comentario del Experto Contenidos:</strong>
-                            <p>Incluir ejemplos concretos de modelado para casos reales de la profesión</p>
-                            <small>Fecha: 05/04/2023</small>
+                <div class="fixed-field">
+                    <strong>Unidad 1:</strong>
+                    <div>Introducción a algoritmos y complejidad</div>
+                    <div class="evaluation-controls">
+                        <button type="button" class="add-comment-btn">Agregar comentario</button>
+                        <button type="button" class="approve-btn">Cumplió</button>
+                        <div class="comment-container hidden">
+                            <textarea class="comment-text" placeholder="Ingrese su comentario..."></textarea>
+                            <button type="button" class="save-comment-btn">Guardar comentario</button>
                         </div>
-                        <button type="button" class="mark-corrected">Marcar como corregido</button>
                     </div>
                 </div>
-                <div class="field-group">
-                    <label>Unidad 3:<textarea name="unidad3">SQL: DDL y DML básico.</textarea></label>
-                </div>
-                <div class="field-group with-comment">
-                    <label>Unidad 4:<textarea name="unidad4">Normalización de bases de datos.</textarea></label>
-                    <div class="comment-section">
-                        <div class="comment-display">
-                            <strong>Comentario del Departamento:</strong>
-                            <p>Ampliar esta unidad para incluir formas normales hasta 4FN con ejemplos prácticos</p>
-                            <small>Fecha: 10/04/2023</small>
+                
+                <div class="fixed-field">
+                    <strong>Unidad 2:</strong>
+                    <div>Estructuras de datos lineales</div>
+                    <div class="evaluation-controls">
+                        <button type="button" class="add-comment-btn">Agregar comentario</button>
+                        <button type="button" class="approve-btn">Cumplió</button>
+                        <div class="comment-container hidden">
+                            <textarea class="comment-text" placeholder="Ingrese su comentario..."></textarea>
+                            <button type="button" class="save-comment-btn">Guardar comentario</button>
                         </div>
-                        <button type="button" class="mark-corrected">Marcar como corregido</button>
+                    </div>
+                </div>
+                
+                <div class="fixed-field">
+                    <strong>Unidad 3:</strong>
+                    <div>Estructuras de datos no lineales</div>
+                    <div class="evaluation-controls">
+                        <button type="button" class="add-comment-btn">Agregar comentario</button>
+                        <button type="button" class="approve-btn">Cumplió</button>
+                        <div class="comment-container hidden">
+                            <textarea class="comment-text" placeholder="Ingrese su comentario..."></textarea>
+                            <button type="button" class="save-comment-btn">Guardar comentario</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="fixed-field">
+                    <strong>Unidad 4:</strong>
+                    <div>Algoritmos de ordenamiento y búsqueda</div>
+                    <div class="evaluation-controls">
+                        <button type="button" class="add-comment-btn">Agregar comentario</button>
+                        <button type="button" class="approve-btn">Cumplió</button>
+                        <div class="comment-container hidden">
+                            <textarea class="comment-text" placeholder="Ingrese su comentario..."></textarea>
+                            <button type="button" class="save-comment-btn">Guardar comentario</button>
+                        </div>
                     </div>
                 </div>
             </fieldset>
@@ -244,126 +306,218 @@
                 <legend>2. Programa de trabajos prácticos</legend>
 
                 <fieldset class="sub">
-                    <legend>Título 1</legend>
-                    <div class="field-group">
-                        <label>Propósito:<textarea>Diseñar un esquema conceptual para un caso de estudio.</textarea></label>
-                    </div>
-                    <div class="field-group with-comment">
-                        <label>Contenido:<textarea>Modelado entidad-relación. Cardinalidades.</textarea></label>
-                        <div class="comment-section">
-                            <div class="comment-display">
-                                <strong>Comentario del Tutor:</strong>
-                                <p>Especificar qué herramientas se utilizarán para el modelado (ej: MySQL Workbench)</p>
-                                <small>Fecha: 12/04/2023</small>
+                    <legend>Trabajos Prácticos Regulares</legend>
+                    <div class="fixed-field">
+                        <strong>Título 1:</strong>
+                        <div>Implementación de listas enlazadas</div>
+                        <div><strong>Propósito:</strong> Aplicar los conceptos de estructuras lineales en un lenguaje de programación</div>
+                        <div><strong>Contenido:</strong> Implementación de operaciones básicas sobre listas</div>
+                        <div><strong>Actividad:</strong> Desarrollo de un módulo de listas enlazadas</div>
+                        <div class="evaluation-controls">
+                            <button type="button" class="add-comment-btn">Agregar comentario</button>
+                            <button type="button" class="approve-btn">Cumplió</button>
+                            <div class="comment-container hidden">
+                                <textarea class="comment-text" placeholder="Ingrese su comentario..."></textarea>
+                                <button type="button" class="save-comment-btn">Guardar comentario</button>
                             </div>
-                            <button type="button" class="mark-corrected">Marcar como corregido</button>
                         </div>
                     </div>
-                    <div class="field-group">
-                        <label>Actividad:<textarea>Desarrollar el modelo ER para un sistema de biblioteca.</textarea></label>
+                </fieldset>
+
+                <fieldset class="sub">
+                    <legend>Trabajos Prácticos de Laboratorio</legend>
+                    <div class="fixed-field">
+                        <strong>Título:</strong>
+                        <div>Análisis de complejidad algorítmica</div>
+                        <div><strong>Propósito:</strong> Medir tiempos de ejecución de diferentes algoritmos</div>
+                        <div><strong>Contenido:</strong> Comparación de algoritmos de ordenamiento</div>
+                        <div><strong>Actividad:</strong> Implementación y medición de tiempos</div>
+                        <div><strong>Ubicación:</strong> Laboratorio de Informática 3</div>
+                        <div class="evaluation-controls">
+                            <button type="button" class="add-comment-btn">Agregar comentario</button>
+                            <button type="button" class="approve-btn">Cumplió</button>
+                            <div class="comment-container hidden">
+                                <textarea class="comment-text" placeholder="Ingrese su comentario..."></textarea>
+                                <button type="button" class="save-comment-btn">Guardar comentario</button>
+                            </div>
+                        </div>
                     </div>
                 </fieldset>
             </fieldset>
 
             <fieldset class="sub">
                 <legend>3. Evaluación</legend>
-                <div class="field-group">
-                    <label>Descripción del modelo de evaluación:<textarea>Evaluación continua con parciales teórico-prácticos.</textarea></label>
-                </div>
-
-                <div class="checkbox-group">
-                    <p>Tipos de evaluación:</p>
-                    <label><input type="checkbox" name="tipo_eval[]" value="inicial" checked>Inicial</label>
-                    <label><input type="checkbox" name="tipo_eval[]" value="proceso" checked>De proceso</label>
-                    <label><input type="checkbox" name="tipo_eval[]" value="final" checked>Final</label>
-                </div>
-
-                <div class="checkbox-group with-comment">
-                    <p>Metodología de evaluación:</p>
-                    <label><input type="checkbox" name="metod_eval[]" value="oral_ind">Oral individual</label>
-                    <label><input type="checkbox" name="metod_eval[]" value="oral_grup">Oral grupal</label>
-                    <label><input type="checkbox" name="metod_eval[]" value="esc_ind" checked>Escrita individual</label>
-                    <label><input type="checkbox" name="metod_eval[]" value="esc_grup">Escrita grupal</label>
-                    <label><input type="checkbox" name="metod_eval[]" value="informes" checked>Informes o monografías</label>
-                    <label><input type="checkbox" name="metod_eval[]" value="otra">Otra</label>
-                    <div class="comment-section">
-                        <div class="comment-display">
-                            <strong>Comentario de la Comisión de Evaluación:</strong>
-                            <p>Considerar incluir instancias de evaluación oral para verificar comprensión conceptual</p>
-                            <small>Fecha: 15/04/2023</small>
+                <div class="fixed-field">
+                    <strong>Descripción del modelo de evaluación:</strong>
+                    <div>Evaluación continua con parciales teórico-prácticos y evaluación de trabajos prácticos.</div>
+                    <div class="evaluation-controls">
+                        <button type="button" class="add-comment-btn">Agregar comentario</button>
+                        <button type="button" class="approve-btn">Cumplió</button>
+                        <div class="comment-container hidden">
+                            <textarea class="comment-text" placeholder="Ingrese su comentario..."></textarea>
+                            <button type="button" class="save-comment-btn">Guardar comentario</button>
                         </div>
-                        <button type="button" class="mark-corrected">Marcar como corregido</button>
                     </div>
                 </div>
-
-                <div class="field-group">
-                    <label>Criterios de evaluación:<textarea>Claridad conceptual, correcta aplicación de técnicas, presentación formal.</textarea></label>
+                
+                <div class="fixed-field">
+                    <strong>Tipos de evaluación:</strong>
+                    <div>De proceso, Final</div>
+                    <div class="evaluation-controls">
+                        <button type="button" class="add-comment-btn">Agregar comentario</button>
+                        <button type="button" class="approve-btn">Cumplió</button>
+                        <div class="comment-container hidden">
+                            <textarea class="comment-text" placeholder="Ingrese su comentario..."></textarea>
+                            <button type="button" class="save-comment-btn">Guardar comentario</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="fixed-field">
+                    <strong>Metodología de evaluación:</strong>
+                    <div>Escrita individual, Informes o monografías</div>
+                    <div class="evaluation-controls">
+                        <button type="button" class="add-comment-btn">Agregar comentario</button>
+                        <button type="button" class="approve-btn">Cumplió</button>
+                        <div class="comment-container hidden">
+                            <textarea class="comment-text" placeholder="Ingrese su comentario..."></textarea>
+                            <button type="button" class="save-comment-btn">Guardar comentario</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="fixed-field">
+                    <strong>Criterios de evaluación:</strong>
+                    <div>Correctitud del código, eficiencia algorítmica, claridad en las explicaciones, cumplimiento de plazos.</div>
+                    <div class="evaluation-controls">
+                        <button type="button" class="add-comment-btn">Agregar comentario</button>
+                        <button type="button" class="approve-btn">Cumplió</button>
+                        <div class="comment-container hidden">
+                            <textarea class="comment-text" placeholder="Ingrese su comentario..."></textarea>
+                            <button type="button" class="save-comment-btn">Guardar comentario</button>
+                        </div>
+                    </div>
                 </div>
 
                 <fieldset class="sub">
                     <legend>Régimen de aprobación</legend>
-                    <div class="field-group">
-                        <label>Alumnos promocionales:<textarea>80% asistencia, 7+ en evaluaciones.</textarea></label>
-                    </div>
-                    <div class="field-group with-comment">
-                        <label>Alumnos regulares:<textarea>75% asistencia, 4+ en evaluaciones.</textarea></label>
-                        <div class="comment-section">
-                            <div class="comment-display">
-                                <strong>Comentario de Secretaría Académica:</strong>
-                                <p>Verificar que los porcentajes coincidan con el reglamento vigente (Ord. 789/2021)</p>
-                                <small>Fecha: 18/04/2023</small>
+                    <div class="fixed-field">
+                        <strong>Alumnos promocionales:</strong>
+                        <div>80% de asistencia, nota mínima 7 en cada evaluación, aprobación de todos los trabajos prácticos.</div>
+                        <div class="evaluation-controls">
+                            <button type="button" class="add-comment-btn">Agregar comentario</button>
+                            <button type="button" class="approve-btn">Cumplió</button>
+                            <div class="comment-container hidden">
+                                <textarea class="comment-text" placeholder="Ingrese su comentario..."></textarea>
+                                <button type="button" class="save-comment-btn">Guardar comentario</button>
                             </div>
-                            <button type="button" class="mark-corrected">Marcar como corregido</button>
                         </div>
                     </div>
-                    <div class="field-group">
-                        <label>Alumnos libres:<textarea>Examen final teórico-práctico.</textarea></label>
+                    
+                    <div class="fixed-field">
+                        <strong>Alumnos regulares:</strong>
+                        <div>75% de asistencia, nota mínima 4 en cada evaluación, aprobación del 80% de los trabajos prácticos.</div>
+                        <div class="evaluation-controls">
+                            <button type="button" class="add-comment-btn">Agregar comentario</button>
+                            <button type="button" class="approve-btn">Cumplió</button>
+                            <div class="comment-container hidden">
+                                <textarea class="comment-text" placeholder="Ingrese su comentario..."></textarea>
+                                <button type="button" class="save-comment-btn">Guardar comentario</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="fixed-field">
+                        <strong>Alumnos libres:</strong>
+                        <div>Examen final teórico-práctico que cubre todos los contenidos de la materia.</div>
+                        <div class="evaluation-controls">
+                            <button type="button" class="add-comment-btn">Agregar comentario</button>
+                            <button type="button" class="approve-btn">Cumplió</button>
+                            <div class="comment-container hidden">
+                                <textarea class="comment-text" placeholder="Ingrese su comentario..."></textarea>
+                                <button type="button" class="save-comment-btn">Guardar comentario</button>
+                            </div>
+                        </div>
                     </div>
                 </fieldset>
             </fieldset>
 
             <fieldset class="sub">
                 <legend>4. Bibliografía</legend>
-                <div class="field-group with-comment">
-                    <label>Bibliografía básica:<textarea>Date, C.J. (2001). Introducción a los sistemas de bases de datos. Pearson.</textarea></label>
-                    <div class="comment-section">
-                        <div class="comment-display">
-                            <strong>Comentario de la Biblioteca:</strong>
-                            <p>Incluir edición más reciente disponible (2019) y verificar disponibilidad en biblioteca</p>
-                            <small>Fecha: 20/04/2023</small>
+                <div class="fixed-field">
+                    <strong>Bibliografía básica:</strong>
+                    <div>Cormen, T. H. (2009). Introduction to Algorithms. MIT Press.</div>
+                    <div class="evaluation-controls">
+                        <button type="button" class="add-comment-btn">Agregar comentario</button>
+                        <button type="button" class="approve-btn">Cumplió</button>
+                        <div class="comment-container hidden">
+                            <textarea class="comment-text" placeholder="Ingrese su comentario..."></textarea>
+                            <button type="button" class="save-comment-btn">Guardar comentario</button>
                         </div>
-                        <button type="button" class="mark-corrected">Marcar como corregido</button>
                     </div>
                 </div>
-                <div class="field-group">
-                    <label>Bibliografía complementaria:<textarea>Material adicional en plataforma virtual.</textarea></label>
+                
+                <div class="fixed-field">
+                    <strong>Bibliografía complementaria:</strong>
+                    <div>Sedgewick, R. (2011). Algorithms. Addison-Wesley.</div>
+                    <div class="evaluation-controls">
+                        <button type="button" class="add-comment-btn">Agregar comentario</button>
+                        <button type="button" class="approve-btn">Cumplió</button>
+                        <div class="comment-container hidden">
+                            <textarea class="comment-text" placeholder="Ingrese su comentario..."></textarea>
+                            <button type="button" class="save-comment-btn">Guardar comentario</button>
+                        </div>
+                    </div>
                 </div>
             </fieldset>
         </fieldset>
 
-        <div class="form-actions">
-            <button type="submit" class="submit-btn">Guardar cambios</button>
+        <div class="final-controls">
+            <button type="button" id="finish-evaluation" class="finish-btn">Terminar evaluación</button>
         </div>
     </form>
 
     <script>
-        // Manejar el marcado como corregido
-        document.querySelectorAll('.mark-corrected').forEach(button => {
-            button.addEventListener('click', function() {
-                const fieldGroup = this.closest('.field-group, .checkbox-group');
-                fieldGroup.classList.add('corrected');
-                this.textContent = '✓ Corregido';
-                this.disabled = true;
-                
-                // Opcional: agregar marca de tiempo
-                const now = new Date();
-                const timestamp = document.createElement('small');
-                timestamp.textContent = `Corregido el: ${now.toLocaleDateString()}`;
-                timestamp.style.display = 'block';
-                timestamp.style.marginTop = '5px';
-                timestamp.style.color = '#28a745';
-                this.parentNode.insertBefore(timestamp, this.nextSibling);
+        // Funcionalidad para los botones de comentarios
+        document.querySelectorAll('.add-comment-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const container = this.closest('.evaluation-controls').querySelector('.comment-container');
+                container.classList.toggle('hidden');
             });
+        });
+
+        // Funcionalidad para guardar comentarios
+        document.querySelectorAll('.save-comment-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const commentText = this.previousElementSibling.value;
+                if (commentText.trim() !== '') {
+                    const commentDisplay = document.createElement('div');
+                    commentDisplay.className = 'saved-comment';
+                    commentDisplay.textContent = `Comentario: ${commentText}`;
+                    
+                    const controls = this.closest('.evaluation-controls');
+                    controls.insertBefore(commentDisplay, controls.querySelector('.comment-container'));
+                    
+                    this.previousElementSibling.value = '';
+                    this.closest('.comment-container').classList.add('hidden');
+                }
+            });
+        });
+
+        // Funcionalidad para botones "Cumplió"
+        document.querySelectorAll('.approve-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                this.style.backgroundColor = '#27ae60';
+                this.textContent = '✓ Cumplió';
+            });
+        });
+
+        // Funcionalidad para terminar evaluación
+        document.getElementById('finish-evaluation').addEventListener('click', function() {
+            if (confirm('¿Está seguro que desea terminar la evaluación? Esta acción no se puede deshacer.')) {
+                alert('Evaluación completada correctamente');
+                // Aquí iría la lógica para enviar los datos al servidor
+            }
         });
     </script>
 </body>
