@@ -10,6 +10,12 @@
     <h1>Panel del Profesor</h1>
     <p class="intro">Seleccione un PAAC para editar o visualizar.</p>
 
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Buscar materia..." class="search-input">
+      <button id="searchButton" class="search-button">Buscar</button>
+      <button id="clearSearch" class="clear-button">Limpiar</button>
+    </div>
+
     <ul class="sede-list">
       <li>
         <button class="toggle sede-toggle">Sede Capital</button>
@@ -110,6 +116,80 @@
         button.classList.toggle('active');
       });
     });
+
+    // Funcionalidad de búsqueda
+    document.getElementById('searchButton').addEventListener('click', searchSubjects);
+    document.getElementById('searchInput').addEventListener('keyup', function(e) {
+      if (e.key === 'Enter') {
+        searchSubjects();
+      }
+    });
+    document.getElementById('clearSearch').addEventListener('click', clearSearch);
+
+    function searchSubjects() {
+      const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+      if (!searchTerm) return;
+
+      const subjectButtons = document.querySelectorAll('.subject-toggle');
+      let found = false;
+
+      // Primero ocultar todo
+      document.querySelectorAll('.nested, .subject-container').forEach(el => {
+        el.classList.add('hidden');
+      });
+      document.querySelectorAll('.toggle').forEach(btn => {
+        btn.classList.remove('active');
+      });
+
+      // Buscar coincidencias
+      subjectButtons.forEach(button => {
+        const subjectName = button.textContent.toLowerCase();
+        if (subjectName.includes(searchTerm)) {
+          found = true;
+          // Mostrar la jerarquía completa
+          showHierarchy(button);
+          // Resaltar la materia encontrada
+          button.style.backgroundColor = '#fffacd';
+        } else {
+          button.style.backgroundColor = '';
+        }
+      });
+
+      if (!found) {
+        alert('No se encontraron materias que coincidan con la búsqueda.');
+      }
+    }
+
+    function showHierarchy(element) {
+      let current = element;
+      while (current) {
+        if (current.classList.contains('toggle')) {
+          current.classList.add('active');
+          const container = current.nextElementSibling;
+          if (container && (container.classList.contains('nested') || container.classList.contains('subject-container'))) {
+            container.classList.remove('hidden');
+          }
+        }
+        current = current.parentElement;
+      }
+    }
+
+    function clearSearch() {
+      document.getElementById('searchInput').value = '';
+      document.querySelectorAll('.subject-toggle').forEach(button => {
+        button.style.backgroundColor = '';
+      });
+      // Ocultar todo excepto el nivel superior
+      document.querySelectorAll('.nested, .subject-container').forEach(el => {
+        el.classList.add('hidden');
+      });
+      document.querySelectorAll('.toggle').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      // Mostrar solo el primer nivel
+      document.querySelector('.sede-list > li > .nested').classList.remove('hidden');
+      document.querySelector('.sede-toggle').classList.add('active');
+    }
   </script>
 </body>
 </html>
