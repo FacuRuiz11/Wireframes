@@ -17,6 +17,7 @@ form {
 h1 {
     text-align: center;
     margin-bottom: 2rem;
+    color: #2c3e50;
 }
 
 fieldset {
@@ -30,11 +31,23 @@ legend {
     font-weight: bold;
     padding: 0 10px;
     font-size: 1.1rem;
+    color: #2c3e50;
 }
 
 .sub {
     margin-left: 1.5rem;
     background-color: #f0f0f0;
+}
+
+.fixed-field {
+    margin: 1rem 0;
+    padding: 0.5rem;
+    background-color: #f8f9fa;
+    border-left: 4px solid #3498db;
+}
+
+.fixed-field strong {
+    color: #2c3e50;
 }
 
 label {
@@ -78,8 +91,74 @@ button[type="submit"] {
     border: none;
     border-radius: 6px;
     cursor: pointer;
+    margin-top: 2rem;
 }
 
 button[type="submit"]:hover {
     background-color: #003e7e;
+}
+
+.add-btn {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+.add-btn:hover {
+    background-color: #219653;
+}
+
+.remove-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    font-size: 0.8rem;
+    line-height: 24px;
+    text-align: center;
+}
+
+.remove-btn:hover {
+    background-color: #c0392b;
+}
+
+.adscripto-item,
+.ayudante-alumno-item,
+.recurso-extra-item,
+.metodologia-extra-item {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0;
+}
+
+.adscripto-item input,
+.ayudante-alumno-item input,
+.recurso-extra-item input,
+.metodologia-extra-item input {
+    flex: 1;
+    margin-right: 0.5rem;
+}
+
+.tp-item,
+.tp-lab-item,
+.tp-campo-item {
+    position: relative;
+    padding-right: 2rem;
+}
+
+.tp-item .remove-btn,
+.tp-lab-item .remove-btn,
+.tp-campo-item .remove-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
 }

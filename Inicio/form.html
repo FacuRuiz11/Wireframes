@@ -12,27 +12,85 @@
         <fieldset>
             <legend>Parte A: Aspectos generales</legend>
 
-            <label>Sede/Delegación:<input type="text" name="sede"></label>
-            <label>Departamento académico:<input type="text" name="departamento"></label>
-            <label>Carrera:<input type="text" name="carrera"></label>
-            <label>Plan de estudio ordenanza:<input type="text" name="plan_estudio"></label>
-            <label>Resolución de acreditación CONEAU vigente:<input type="text" name="res_coneau"></label>
-            <label>Resolución Ministerial N°/Año:<input type="text" name="res_ministerial"></label>
-            <label>Asignatura:<input type="text" name="asignatura"></label>
-            <label>Curso:<input type="text" name="curso"></label>
-            <label>Régimen:<input type="text" name="regimen"></label>
+            <div class="fixed-field">
+                <strong>Sede/Delegación:</strong> Sede Capital
+            </div>
+            
+            <div class="fixed-field">
+                <strong>Departamento académico:</strong> Ciencias Exactas
+            </div>
+            
+            <div class="fixed-field">
+                <strong>Carrera:</strong> Licenciatura en Sistemas de Información
+            </div>
+            
+            <div class="fixed-field">
+                <strong>Plan de estudio ordenanza:</strong> Ord. 1234/2018
+            </div>
+            
+            <div class="fixed-field">
+                <strong>Resolución de acreditación CONEAU vigente:</strong> Res. 567/2020
+            </div>
+            
+            <div class="fixed-field">
+                <strong>Resolución Ministerial N°/Año:</strong> Res. 891/2019
+            </div>
+            
+            <div class="fixed-field">
+                <strong>Asignatura:</strong> Algoritmos y Estructuras de Datos
+            </div>
+            
+            <div class="fixed-field">
+                <strong>Curso:</strong> 2° Año
+            </div>
+            
+            <div class="fixed-field">
+                <strong>Régimen:</strong> Cuatrimestral
+            </div>
 
             <fieldset class="sub">
                 <legend>Equipo de cátedra</legend>
-                <label>Profesor Titular:<input type="text" name="prof_titular"></label>
-                <label>Profesor Asociado:<input type="text" name="prof_asociado"></label>
-                <label>Profesor Adjunto:<input type="text" name="prof_adjunto"></label>
-                <label>Profesor JTP:<input type="text" name="prof_jtp"></label>
-                <label>Profesor Ayudante:<input type="text" name="prof_ayudante"></label>
+                <div class="fixed-field">
+                    <strong>Profesor Titular:</strong> Dr. Juan Pérez
+                </div>
+                <div class="fixed-field">
+                    <strong>Profesor Asociado:</strong> Mg. María Gómez
+                </div>
+                <div class="fixed-field">
+                    <strong>Profesor Adjunto:</strong> Lic. Carlos Rodríguez
+                </div>
+                <div class="fixed-field">
+                    <strong>Profesor JTP:</strong> Ing. Laura Fernández
+                </div>
+                <div class="fixed-field">
+                    <strong>Profesor Ayudante:</strong> Lic. Pablo Martínez
+                </div>
+                
+                <div id="adscriptos-container">
+                    <div class="adscripto-item">
+                        <label>Adscripto: <input type="text" name="adscripto[]"></label>
+                        <button type="button" class="remove-btn">×</button>
+                    </div>
+                </div>
+                <button type="button" id="add-adscripto" class="add-btn">+ Agregar Adscripto</button>
+                
+                <div id="ayudantes-alumnos-container">
+                    <div class="ayudante-alumno-item">
+                        <label>Ayudante Alumno: <input type="text" name="ayudante_alumno[]"></label>
+                        <button type="button" class="remove-btn">×</button>
+                    </div>
+                </div>
+                <button type="button" id="add-ayudante-alumno" class="add-btn">+ Agregar Ayudante Alumno</button>
             </fieldset>
 
-            <label>Crédito horario:<input type="number" name="credito_horario"></label>
-            <label>Contenidos mínimos:<textarea name="contenidos_minimos"></textarea></label>
+            <div class="fixed-field">
+                <strong>Crédito horario:</strong> 120 horas
+            </div>
+            
+            <div class="fixed-field">
+                <strong>Contenidos mínimos:</strong> 
+                <div>Algoritmos básicos. Estructuras de datos lineales y no lineales. Complejidad algorítmica. Métodos de ordenamiento y búsqueda. Implementación en lenguaje de programación.</div>
+            </div>
         </fieldset>
 
         <fieldset>
@@ -79,6 +137,14 @@
                 <label><input type="checkbox" name="recursos[]" value="biblio">Bibliografía</label>
                 <label><input type="checkbox" name="recursos[]" value="soportes">Soportes informáticos</label>
                 <label><input type="checkbox" name="recursos[]" value="otros">Otros</label>
+                
+                <div id="recursos-extra-container">
+                    <div class="recurso-extra-item">
+                        <input type="text" name="recurso_extra[]" placeholder="Nuevo recurso didáctico">
+                        <button type="button" class="remove-btn">×</button>
+                    </div>
+                </div>
+                <button type="button" id="add-recurso" class="add-btn">+ Agregar recurso</button>
             </div>
         </fieldset>
 
@@ -87,23 +153,38 @@
 
             <fieldset class="sub">
                 <legend>1. Contenidos</legend>
-                <label>Unidad 1:<textarea name="unidad1"></textarea></label>
-                <label>Unidad 2:<textarea name="unidad2"></textarea></label>
-                <label>Unidad 3:<textarea name="unidad3"></textarea></label>
-                <label>Unidad 4:<textarea name="unidad4"></textarea></label>
+                <div id="unidades-container">
+                    <label>Unidad 1:<textarea name="unidad1">Introducción a algoritmos y complejidad</textarea></label>
+                    <label>Unidad 2:<textarea name="unidad2">Estructuras de datos lineales</textarea></label>
+                    <label>Unidad 3:<textarea name="unidad3">Estructuras de datos no lineales</textarea></label>
+                    <label>Unidad 4:<textarea name="unidad4">Algoritmos de ordenamiento y búsqueda</textarea></label>
+                </div>
+                <button type="button" id="add-unidad" class="add-btn">+ Agregar unidad</button>
             </fieldset>
 
             <fieldset class="sub">
                 <legend>2. Programa de trabajos prácticos</legend>
 
                 <fieldset class="sub">
-                    <legend>Título 1</legend>
-                    <label>Propósito:<textarea></textarea></label>
-                    <label>Contenido:<textarea></textarea></label>
-                    <label>Actividad:<textarea></textarea></label>
+                    <legend>Trabajos Prácticos Regulares</legend>
+                    <fieldset class="sub tp-item">
+                        <legend>Título 1</legend>
+                        <label>Propósito:<textarea></textarea></label>
+                        <label>Contenido:<textarea></textarea></label>
+                        <label>Actividad:<textarea></textarea></label>
+                    </fieldset>
+                    <button type="button" class="add-tp-btn add-btn">+ Agregar TP Regular</button>
                 </fieldset>
-                <!-- Se pueden repetir más bloques como este si hiciera falta -->
 
+                <fieldset class="sub" id="tp-laboratorio-container">
+                    <legend>Trabajos Prácticos de Laboratorio</legend>
+                    <button type="button" id="add-tp-lab" class="add-btn">+ Agregar sección de TP Laboratorio</button>
+                </fieldset>
+
+                <fieldset class="sub" id="tp-campo-container">
+                    <legend>Trabajos Prácticos de Campo</legend>
+                    <button type="button" id="add-tp-campo" class="add-btn">+ Agregar sección de TP Campo</button>
+                </fieldset>
             </fieldset>
 
             <fieldset class="sub">
@@ -117,7 +198,7 @@
                     <label><input type="checkbox" name="tipo_eval[]" value="final">Final</label>
                 </div>
 
-                <div class="checkbox-group">
+                <div class="checkbox-group" id="metodologia-eval-container">
                     <p>Metodología de evaluación:</p>
                     <label><input type="checkbox" name="metod_eval[]" value="oral_ind">Oral individual</label>
                     <label><input type="checkbox" name="metod_eval[]" value="oral_grup">Oral grupal</label>
@@ -125,6 +206,14 @@
                     <label><input type="checkbox" name="metod_eval[]" value="esc_grup">Escrita grupal</label>
                     <label><input type="checkbox" name="metod_eval[]" value="informes">Informes o monografías</label>
                     <label><input type="checkbox" name="metod_eval[]" value="otra">Otra</label>
+                    
+                    <div id="metodologia-extra-container">
+                        <div class="metodologia-extra-item">
+                            <input type="text" name="metodologia_extra[]" placeholder="Otra metodología">
+                            <button type="button" class="remove-btn">×</button>
+                        </div>
+                    </div>
+                    <button type="button" id="add-metodologia" class="add-btn">+ Agregar metodología</button>
                 </div>
 
                 <label>Criterios de evaluación:<textarea></textarea></label>
@@ -146,5 +235,128 @@
 
         <button type="submit">Enviar</button>
     </form>
+
+    <script>
+        // Funcionalidad para agregar adscriptos
+        document.getElementById('add-adscripto').addEventListener('click', function() {
+            const container = document.getElementById('adscriptos-container');
+            const newItem = document.createElement('div');
+            newItem.className = 'adscripto-item';
+            newItem.innerHTML = `
+                <label>Adscripto: <input type="text" name="adscripto[]"></label>
+                <button type="button" class="remove-btn">×</button>
+            `;
+            container.appendChild(newItem);
+            addRemoveListener(newItem);
+        });
+
+        // Funcionalidad para agregar ayudantes alumnos
+        document.getElementById('add-ayudante-alumno').addEventListener('click', function() {
+            const container = document.getElementById('ayudantes-alumnos-container');
+            const newItem = document.createElement('div');
+            newItem.className = 'ayudante-alumno-item';
+            newItem.innerHTML = `
+                <label>Ayudante Alumno: <input type="text" name="ayudante_alumno[]"></label>
+                <button type="button" class="remove-btn">×</button>
+            `;
+            container.appendChild(newItem);
+            addRemoveListener(newItem);
+        });
+
+        // Funcionalidad para agregar recursos didácticos
+        document.getElementById('add-recurso').addEventListener('click', function() {
+            const container = document.getElementById('recursos-extra-container');
+            const newItem = document.createElement('div');
+            newItem.className = 'recurso-extra-item';
+            newItem.innerHTML = `
+                <input type="text" name="recurso_extra[]" placeholder="Nuevo recurso didáctico">
+                <button type="button" class="remove-btn">×</button>
+            `;
+            container.appendChild(newItem);
+            addRemoveListener(newItem);
+        });
+
+        // Funcionalidad para agregar unidades
+        document.getElementById('add-unidad').addEventListener('click', function() {
+            const container = document.getElementById('unidades-container');
+            const count = container.querySelectorAll('label').length + 1;
+            const newItem = document.createElement('label');
+            newItem.innerHTML = `Unidad ${count}:<textarea name="unidad${count}"></textarea>`;
+            container.appendChild(newItem);
+        });
+
+        // Funcionalidad para agregar TP Laboratorio
+        document.getElementById('add-tp-lab').addEventListener('click', function() {
+            const container = document.getElementById('tp-laboratorio-container');
+            const newItem = document.createElement('fieldset');
+            newItem.className = 'sub tp-lab-item';
+            newItem.innerHTML = `
+                <legend>Trabajo Práctico de Laboratorio</legend>
+                <label>Propósito:<textarea></textarea></label>
+                <label>Contenido:<textarea></textarea></label>
+                <label>Actividad:<textarea></textarea></label>
+                <label>Ubicación:<textarea></textarea></label>
+                <button type="button" class="remove-btn">×</button>
+            `;
+            container.insertBefore(newItem, this);
+            addRemoveListener(newItem);
+        });
+
+        // Funcionalidad para agregar TP Campo
+        document.getElementById('add-tp-campo').addEventListener('click', function() {
+            const container = document.getElementById('tp-campo-container');
+            const newItem = document.createElement('fieldset');
+            newItem.className = 'sub tp-campo-item';
+            newItem.innerHTML = `
+                <legend>Trabajo Práctico de Campo</legend>
+                <label>Propósito:<textarea></textarea></label>
+                <label>Contenido:<textarea></textarea></label>
+                <label>Actividad:<textarea></textarea></label>
+                <label>Ubicación:<textarea></textarea></label>
+                <button type="button" class="remove-btn">×</button>
+            `;
+            container.insertBefore(newItem, this);
+            addRemoveListener(newItem);
+        });
+
+        // Funcionalidad para agregar metodologías de evaluación
+        document.getElementById('add-metodologia').addEventListener('click', function() {
+            const container = document.getElementById('metodologia-extra-container');
+            const newItem = document.createElement('div');
+            newItem.className = 'metodologia-extra-item';
+            newItem.innerHTML = `
+                <input type="text" name="metodologia_extra[]" placeholder="Otra metodología">
+                <button type="button" class="remove-btn">×</button>
+            `;
+            container.appendChild(newItem);
+            addRemoveListener(newItem);
+        });
+
+        // Funcionalidad para agregar TP Regular
+        document.querySelectorAll('.add-tp-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const container = this.parentElement;
+                const count = container.querySelectorAll('.tp-item').length + 1;
+                const newItem = document.createElement('fieldset');
+                newItem.className = 'sub tp-item';
+                newItem.innerHTML = `
+                    <legend>Título ${count}</legend>
+                    <label>Propósito:<textarea></textarea></label>
+                    <label>Contenido:<textarea></textarea></label>
+                    <label>Actividad:<textarea></textarea></label>
+                    <button type="button" class="remove-btn">×</button>
+                `;
+                container.insertBefore(newItem, this);
+                addRemoveListener(newItem);
+            });
+        });
+
+        // Función para manejar el botón de eliminar
+        function addRemoveListener(element) {
+            element.querySelector('.remove-btn').addEventListener('click', function() {
+                element.remove();
+            });
+        }
+    </script>
 </body>
 </html>
