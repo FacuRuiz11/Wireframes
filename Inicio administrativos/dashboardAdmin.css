@@ -1,4 +1,3 @@
-/* Estilos base */
 body {
   font-family: "Segoe UI", sans-serif;
   background-color: #f7f9fc;
@@ -22,10 +21,6 @@ h1 {
   margin-bottom: 1.5rem;
 }
 
-h2, h3 {
-  color: #2c3e50;
-}
-
 .intro {
   text-align: center;
   margin-bottom: 2rem;
@@ -33,48 +28,19 @@ h2, h3 {
   font-size: 1.1rem;
 }
 
-/* Encabezado del departamento */
-.department-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1.5rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid #eee;
-}
-
-.actions {
-  display: flex;
-  gap: 10px;
-}
-
-.action-btn {
-  padding: 0.5rem 1rem;
-  background-color: #e9ecef;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
-
-.action-btn:hover {
-  background-color: #d6d8db;
-}
-
-/* Lista de carreras y materias */
-.career-list, .nested {
+.sede-list, .nested {
   list-style-type: none;
   padding-left: 0;
 }
 
-.career-list > li {
-  margin-bottom: 1.5rem;
+.sede-list > li {
+  margin-bottom: 1rem;
 }
 
 .toggle {
   background: none;
   color: inherit;
-  padding: 0.7rem 1rem;
+  padding: 0.7rem 1.2rem;
   font: inherit;
   border: none;
   cursor: pointer;
@@ -85,6 +51,7 @@ h2, h3 {
   align-items: center;
   transition: all 0.2s ease;
   border-radius: 4px;
+  margin: 2px 0;
 }
 
 .toggle:hover {
@@ -94,93 +61,173 @@ h2, h3 {
 .toggle::after {
   content: "+";
   font-size: 1.2rem;
+  transition: transform 0.2s ease;
 }
 
 .toggle.active::after {
   content: "-";
 }
 
-/* Carrera */
-.career-toggle {
-  font-weight: 600;
-  color: #2980b9;
-  padding-left: 1rem;
-  border-left: 4px solid #3498db;
-  background-color: #f5fafd;
+/* Sede */
+.sede-toggle {
+  background-color: #2c3e50;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 1rem 1.5rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
 }
 
-.career-toggle:hover {
-  background-color: #e1f0f8;
+.sede-toggle:hover {
+  background-color: #1a252f;
+}
+
+.sede-toggle::after {
+  color: white;
 }
 
 /* Materia */
-.subject-item {
-  display: flex;
-  flex-direction: column;
-  padding: 0.5rem 1rem;
-  margin-left: 2rem;
-  background-color: #f8f9fa;
-  border-radius: 4px;
-  margin-bottom: 0.5rem;
-}
-
-.paac-checkbox {
-  margin-right: 0.5rem;
-}
-
 .subject-toggle {
-  font-weight: 500;
   color: #555;
-  padding: 0.5rem 0;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
+  padding-left: 3rem;
+  border-left: 4px solid #95a5a6;
+  background-color: #f8f9fa;
+  margin-top: 0.4rem;
+  font-weight: 500;
 }
 
+.subject-toggle:hover {
+  background-color: #eef0f1;
+}
+
+/* Contenedor de opciones de materia */
+.subject-container {
+  margin-left: 3rem;
+  padding: 0.5rem 0 0.5rem 1rem;
+  border-left: 3px solid #e0e0e0;
+  background-color: #fafafa;
+  border-radius: 0 0 0 4px;
+}
+
+/* Opciones de PAAC */
 .subject-options {
-  margin-left: 1.5rem;
-  color: #666;
-  font-size: 0.9rem;
+  padding-left: 0;
+  margin: 0;
 }
 
-.paac-version {
-  display: inline-block;
-  margin-right: 1rem;
+.subject-options li {
+  margin: 0.5rem 0;
+  padding: 0.3rem 0.5rem;
+  border-radius: 3px;
+  transition: background-color 0.2s;
+}
+
+.subject-options li:hover {
+  background-color: #f0f0f0;
 }
 
 .current-paac {
+  font-weight: bold;
   color: #27ae60;
-  font-weight: 500;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.2s ease;
 }
 
-.paac-status {
-  padding: 0.2rem 0.5rem;
-  border-radius: 3px;
-  font-size: 0.85rem;
+.current-paac:hover {
+  text-decoration: none;
+  background-color: #e6f0fa;
 }
 
-.paac-status.pending {
-  background-color: #fff3cd;
-  color: #856404;
+.current-paac::before {
+  content: "→";
+  margin-right: 0.7rem;
+  color: #27ae60;
 }
 
-.paac-status.in-review {
-  background-color: #cce5ff;
-  color: #004085;
+/* Estado de aprobación */
+.approval-status {
+  margin: 0.3rem 0;
 }
 
-.paac-status.approved {
-  background-color: #d4edda;
-  color: #155724;
+.status {
+  display: block;
+  padding: 0.5rem 1rem;
+  margin: 0.2rem 0;
+  border-radius: 4px;
+  font-size: 0.9rem;
 }
 
-/* Formulario de aprobación */
-.approval-form {
+.up-approved {
+  background-color: #d5f5e3;
+  color: #27ae60;
+  border-left: 4px solid #27ae60;
+}
+
+.up-pending {
+  background-color: #fdedec;
+  color: #e74c3c;
+  border-left: 4px solid #e74c3c;
+}
+
+.dc-approved {
+  background-color: #d6eaf8;
+  color: #2980b9;
+  border-left: 4px solid #2980b9;
+}
+
+.dc-pending {
+  background-color: #fdedec;
+  color: #e74c3c;
+  border-left: 4px solid #e74c3c;
+}
+
+/* Botones de acción */
+.select-btn {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 0.7rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  margin: 0.5rem 0;
+  transition: all 0.2s;
+  font-size: 0.9rem;
+}
+
+.select-btn:hover {
+  background-color: #2980b9;
+}
+
+.select-btn.selected {
+  background-color: #27ae60;
+}
+
+.select-btn.disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+/* Formulario de resolución */
+.resolution-form {
   margin-top: 2rem;
   padding: 1.5rem;
   background-color: #f8f9fa;
   border-radius: 6px;
   border-left: 4px solid #2c3e50;
+}
+
+.resolution-form h2 {
+  color: #2c3e50;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
 }
 
 .form-group {
@@ -190,42 +237,34 @@ h2, h3 {
 .form-group label {
   display: block;
   margin-bottom: 0.5rem;
+  color: #2c3e50;
   font-weight: 500;
 }
 
-.form-group input[type="text"],
-.form-group input[type="date"],
-.form-group textarea {
+.form-group input {
   width: 100%;
-  padding: 0.5rem;
-  border: 1px solid #ced4da;
-  border-radius: 4px;
-}
-
-.form-group textarea {
-  resize: vertical;
-  min-height: 80px;
-}
-
-.approve-btn {
-  display: block;
-  width: 100%;
-  padding: 0.8rem;
-  background-color: #28a745;
-  color: white;
-  border: none;
+  padding: 0.7rem;
+  border: 1px solid #ddd;
   border-radius: 4px;
   font-size: 1rem;
+}
+
+.generate-btn {
+  background-color: #2c3e50;
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  font-size: 1rem;
+  width: 100%;
   margin-top: 1rem;
 }
 
-.approve-btn:hover {
-  background-color: #218838;
+.generate-btn:hover {
+  background-color: #1a252f;
 }
 
-/* Estado oculto */
 .hidden {
   display: none;
 }

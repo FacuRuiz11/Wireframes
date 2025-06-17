@@ -2,152 +2,151 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Aprobación de PAACs - Departamento de Ciencias Exactas</title>
+  <title>Panel Administrativo - PAAC</title>
   <link rel="stylesheet" href="dashboardAdmin.css">
 </head>
 <body>
   <main class="container">
-    <h1>Aprobación de PAACs</h1>
-    <p class="intro">Seleccione los PAACs a aprobar y complete los datos de resolución.</p>
+    <h1>Panel Administrativo - Licenciatura en Sistemas de Información</h1>
+    <p class="intro">Revisión de PAAC para aprobación final</p>
 
-    <div class="department-header">
-      <h2>Departamento de Ciencias Exactas</h2>
-      <div class="actions">
-        <button id="select-all" class="action-btn">Seleccionar todos</button>
-        <button id="deselect-all" class="action-btn">Deseleccionar todos</button>
-      </div>
-    </div>
-
-    <ul class="career-list">
+    <ul class="sede-list">
       <li>
-        <button class="toggle career-toggle">Licenciatura en Sistemas de Información</button>
+        <button class="toggle sede-toggle active">Sede Capital</button>
         <ul class="nested">
           <li>
-            <div class="subject-item">
-              <input type="checkbox" id="paac-1" class="paac-checkbox">
-              <label for="paac-1" class="subject-toggle">Algoritmos y Estructuras de Datos</label>
-              <ul class="subject-options">
-                <li><span class="paac-version current-paac">PAAC 2024</span></li>
-                <li><span class="paac-status pending">Pendiente de aprobación</span></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <div class="subject-item">
-              <input type="checkbox" id="paac-2" class="paac-checkbox" checked>
-              <label for="paac-2" class="subject-toggle">Base de Datos</label>
-              <ul class="subject-options">
-                <li><span class="paac-version current-paac">PAAC 2024</span></li>
-                <li><span class="paac-status in-review">En revisión</span></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <div class="subject-item">
-              <input type="checkbox" id="paac-3" class="paac-checkbox">
-              <label for="paac-3" class="subject-toggle">Ingeniería de Software</label>
-              <ul class="subject-options">
-                <li><span class="paac-version current-paac">PAAC 2024</span></li>
-                <li><span class="paac-status approved">Aprobado (Res. 456/2023)</span></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <button class="toggle career-toggle">Profesorado en Matemática</button>
-        <ul class="nested">
-          <li>
-            <div class="subject-item">
-              <input type="checkbox" id="paac-4" class="paac-checkbox">
-              <label for="paac-4" class="subject-toggle">Análisis Matemático I</label>
-              <ul class="subject-options">
-                <li><span class="paac-version current-paac">PAAC 2024</span></li>
-                <li><span class="paac-status pending">Pendiente de aprobación</span></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <div class="subject-item">
-              <input type="checkbox" id="paac-5" class="paac-checkbox" checked>
-              <label for="paac-5" class="subject-toggle">Álgebra</label>
-              <ul class="subject-options">
-                <li><span class="paac-version current-paac">PAAC 2024</span></li>
-                <li><span class="paac-status pending">Pendiente de aprobación</span></li>
-              </ul>
-            </div>
+            <button class="toggle dept-toggle active">Departamento de Ciencias Exactas</button>
+            <ul class="nested">
+              <li>
+                <button class="toggle career-toggle active">Licenciatura en Sistemas de Información</button>
+                <ul class="nested">
+                  <!-- Materia 1 -->
+                  <li>
+                    <button class="toggle subject-toggle active">Algoritmos y Estructuras de Datos</button>
+                    <div class="subject-container">
+                      <ul class="subject-options">
+                        <li class="approval-status">
+                          <span class="status up-approved">Unidad Pedagógica: Aprobado ✓</span>
+                        </li>
+                        <li class="approval-status">
+                          <span class="status dc-approved">Dirección Carrera: Aprobado ✓</span>
+                        </li>
+                        <li>
+                          <a href="formRevision.html" class="current-paac">PAAC Actual (2024)</a>
+                        </li>
+                        <li>
+                          <button class="select-btn">Seleccionar para resolución</button>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  
+                  <!-- Materia 2 -->
+                  <li>
+                    <button class="toggle subject-toggle active">Base de Datos</button>
+                    <div class="subject-container">
+                      <ul class="subject-options">
+                        <li class="approval-status">
+                          <span class="status up-approved">Unidad Pedagógica: Aprobado ✓</span>
+                        </li>
+                        <li class="approval-status">
+                          <span class="status dc-pending">Dirección Carrera: Pendiente ✗</span>
+                        </li>
+                        <li>
+                          <a href="formRevision.html" class="current-paac">PAAC Actual (2024)</a>
+                        </li>
+                        <li>
+                          <button class="select-btn disabled" disabled>No disponible</button>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  
+                  <!-- Materia 3 -->
+                  <li>
+                    <button class="toggle subject-toggle active">Paradigmas de Programación</button>
+                    <div class="subject-container">
+                      <ul class="subject-options">
+                        <li class="approval-status">
+                          <span class="status up-approved">Unidad Pedagógica: Aprobado ✓</span>
+                        </li>
+                        <li class="approval-status">
+                          <span class="status dc-approved">Dirección Carrera: Aprobado ✓</span>
+                        </li>
+                        <li>
+                          <a href="formRevision.html" class="current-paac">PAAC Actual (2024)</a>
+                        </li>
+                        <li>
+                          <button class="select-btn">Seleccionar para resolución</button>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
           </li>
         </ul>
       </li>
     </ul>
 
-    <div class="approval-form">
-      <h3>Datos de Aprobación</h3>
+    <div class="resolution-form">
+      <h2>Resolución</h2>
       <div class="form-group">
-        <label for="resolution-number">Número de Resolución:</label>
-        <input type="text" id="resolution-number" placeholder="Ej: 789/2024">
+        <label for="resolutionNumber">Número de Resolución:</label>
+        <input type="text" id="resolutionNumber" placeholder="Ej: 1234/2024">
       </div>
       <div class="form-group">
-        <label for="approval-date">Fecha de Aprobación:</label>
-        <input type="date" id="approval-date">
+        <label for="resolutionDate">Fecha:</label>
+        <input type="date" id="resolutionDate">
       </div>
-      <div class="form-group">
-        <label for="comments">Observaciones:</label>
-        <textarea id="comments" rows="3"></textarea>
-      </div>
-      <button id="approve-selected" class="approve-btn">Aprobar PAACs seleccionados</button>
+      <button id="generateResolution" class="generate-btn">Generar Resolución</button>
     </div>
   </main>
 
   <script>
-    // Manejo de selección/deselección
-    document.getElementById('select-all').addEventListener('click', () => {
-      document.querySelectorAll('.paac-checkbox').forEach(checkbox => {
-        checkbox.checked = true;
+    // Manejar selección de materias
+    document.querySelectorAll('.select-btn:not(.disabled)').forEach(btn => {
+      btn.addEventListener('click', function() {
+        this.classList.toggle('selected');
+        if (this.classList.contains('selected')) {
+          this.textContent = 'Seleccionado ✓';
+          this.style.backgroundColor = '#27ae60';
+        } else {
+          this.textContent = 'Seleccionar para resolución';
+          this.style.backgroundColor = '#3498db';
+        }
       });
     });
 
-    document.getElementById('deselect-all').addEventListener('click', () => {
-      document.querySelectorAll('.paac-checkbox').forEach(checkbox => {
-        checkbox.checked = false;
-      });
-    });
-
-    // Manejo de aprobación
-    document.getElementById('approve-selected').addEventListener('click', () => {
-      const resolutionNumber = document.getElementById('resolution-number').value;
-      const approvalDate = document.getElementById('approval-date').value;
+    // Generar resolución
+    document.getElementById('generateResolution').addEventListener('click', function() {
+      const selectedCount = document.querySelectorAll('.select-btn.selected').length;
+      const resolutionNumber = document.getElementById('resolutionNumber').value;
+      const resolutionDate = document.getElementById('resolutionDate').value;
       
-      if (!resolutionNumber) {
-        alert('Por favor ingrese el número de resolución');
+      if (!resolutionNumber || !resolutionDate) {
+        alert('Por favor complete todos los campos');
         return;
       }
 
-      const selectedPAACs = Array.from(document.querySelectorAll('.paac-checkbox:checked'))
-        .map(checkbox => checkbox.nextElementSibling.textContent);
-      
-      if (selectedPAACs.length === 0) {
-        alert('Por favor seleccione al menos un PAAC para aprobar');
+      if (selectedCount === 0) {
+        alert('Por favor seleccione al menos una materia aprobada');
         return;
       }
 
-      // Simular aprobación (en un sistema real sería una llamada AJAX)
-      alert(`PAACs aprobados con Resolución ${resolutionNumber}:\n\n- ${selectedPAACs.join('\n- ')}`);
-      
-      // Actualizar estado visualmente
-      document.querySelectorAll('.paac-checkbox:checked').forEach(checkbox => {
-        const statusElement = checkbox.closest('.subject-item').querySelector('.paac-status');
-        statusElement.textContent = `Aprobado (Res. ${resolutionNumber})`;
-        statusElement.className = 'paac-status approved';
-      });
+      if (confirm(`¿Generar resolución ${resolutionNumber} con ${selectedCount} materias seleccionadas?`)) {
+        alert(`Resolución ${resolutionNumber} generada correctamente para fecha ${resolutionDate}`);
+        // Aquí iría la lógica para enviar los datos al servidor
+      }
     });
 
-    // Toggle para carreras
+    // Manejar toggles de navegación
     document.querySelectorAll('.toggle').forEach(button => {
       button.addEventListener('click', (e) => {
         e.stopPropagation();
-        const nested = button.nextElementSibling;
-        nested.classList.toggle('hidden');
+        const container = button.nextElementSibling;
+        container.classList.toggle('hidden');
         button.classList.toggle('active');
       });
     });
