@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario PAAC</title>
+    <link rel="stylesheet" href="formStyle.css">
+</head>
+<body>
+    <form>
+        <h1>Formulario PAAC - Programa Anual de Actividades de la Cátedra</h1>
+
+        <fieldset>
+            <legend>Parte A: Aspectos generales</legend>
+
+            <label>Sede/Delegación:<input type="text" name="sede"></label>
+            <label>Departamento académico:<input type="text" name="departamento"></label>
+            <label>Carrera:<input type="text" name="carrera"></label>
+            <label>Plan de estudio ordenanza:<input type="text" name="plan_estudio"></label>
+            <label>Resolución de acreditación CONEAU vigente:<input type="text" name="res_coneau"></label>
+            <label>Resolución Ministerial N°/Año:<input type="text" name="res_ministerial"></label>
+            <label>Asignatura:<input type="text" name="asignatura"></label>
+            <label>Curso:<input type="text" name="curso"></label>
+            <label>Régimen:<input type="text" name="regimen"></label>
+
+            <fieldset class="sub">
+                <legend>Equipo de cátedra</legend>
+                <label>Profesor Titular:<input type="text" name="prof_titular"></label>
+                <label>Profesor Asociado:<input type="text" name="prof_asociado"></label>
+                <label>Profesor Adjunto:<input type="text" name="prof_adjunto"></label>
+                <label>Profesor JTP:<input type="text" name="prof_jtp"></label>
+                <label>Profesor Ayudante:<input type="text" name="prof_ayudante"></label>
+            </fieldset>
+
+            <label>Crédito horario:<input type="number" name="credito_horario"></label>
+            <label>Contenidos mínimos:<textarea name="contenidos_minimos"></textarea></label>
+        </fieldset>
+
+        <fieldset>
+            <legend>1. Fundamentación</legend>
+
+            <fieldset class="sub">
+                <legend>a. Introducción</legend>
+                <label>Importancia de la asignatura en el plan de estudios:<textarea name="importancia"></textarea></label>
+                <label>Relación con el perfil profesional esperado:<textarea name="perfil_profesional"></textarea></label>
+            </fieldset>
+
+            <fieldset class="sub">
+                <legend>b. Diagnóstico</legend>
+                <label>Articulación con las asignaturas correlativas:<textarea name="art_correlativas"></textarea></label>
+                <label>Articulación con las materias del mismo año:<textarea name="art_mismo_anio"></textarea></label>
+                <label>Análisis de los alumnos:<textarea name="analisis_alumnos"></textarea></label>
+                <label>Infraestructura requerida:<textarea name="infraestructura"></textarea></label>
+            </fieldset>
+        </fieldset>
+
+        <fieldset>
+            <legend>2. Objetivos</legend>
+            <label>Objetivos de la carrera:<textarea name="obj_carrera"></textarea></label>
+            <label>Objetivos de la cátedra:<textarea name="obj_catedra"></textarea></label>
+            <label>Objetivos específicos:<textarea name="obj_especificos"></textarea></label>
+        </fieldset>
+
+        <fieldset>
+            <legend>3. Metodología de la enseñanza</legend>
+            <div class="checkbox-group">
+                <p>Clases:</p>
+                <label><input type="checkbox" name="clases[]" value="teoricas">Teóricas</label>
+                <label><input type="checkbox" name="clases[]" value="practicas">Prácticas</label>
+                <label><input type="checkbox" name="clases[]" value="laboratorio">Laboratorio</label>
+            </div>
+
+            <div class="checkbox-group">
+                <p>Recursos didácticos:</p>
+                <label><input type="checkbox" name="recursos[]" value="guia_ej">Guía de ejercicios</label>
+                <label><input type="checkbox" name="recursos[]" value="guia_tp">Guía de trabajos prácticos</label>
+                <label><input type="checkbox" name="recursos[]" value="apuntes">Apuntes ad-hoc</label>
+                <label><input type="checkbox" name="recursos[]" value="videos">Videos</label>
+                <label><input type="checkbox" name="recursos[]" value="ppt">Presentaciones</label>
+                <label><input type="checkbox" name="recursos[]" value="biblio">Bibliografía</label>
+                <label><input type="checkbox" name="recursos[]" value="soportes">Soportes informáticos</label>
+                <label><input type="checkbox" name="recursos[]" value="otros">Otros</label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Parte B: Aspectos curriculares</legend>
+
+            <fieldset class="sub">
+                <legend>1. Contenidos</legend>
+                <label>Unidad 1:<textarea name="unidad1"></textarea></label>
+                <label>Unidad 2:<textarea name="unidad2"></textarea></label>
+                <label>Unidad 3:<textarea name="unidad3"></textarea></label>
+                <label>Unidad 4:<textarea name="unidad4"></textarea></label>
+            </fieldset>
+
+            <fieldset class="sub">
+                <legend>2. Programa de trabajos prácticos</legend>
+
+                <fieldset class="sub">
+                    <legend>Título 1</legend>
+                    <label>Propósito:<textarea></textarea></label>
+                    <label>Contenido:<textarea></textarea></label>
+                    <label>Actividad:<textarea></textarea></label>
+                </fieldset>
+                <!-- Se pueden repetir más bloques como este si hiciera falta -->
+
+            </fieldset>
+
+            <fieldset class="sub">
+                <legend>3. Evaluación</legend>
+                <label>Descripción del modelo de evaluación:<textarea></textarea></label>
+
+                <div class="checkbox-group">
+                    <p>Tipos de evaluación:</p>
+                    <label><input type="checkbox" name="tipo_eval[]" value="inicial">Inicial</label>
+                    <label><input type="checkbox" name="tipo_eval[]" value="proceso">De proceso</label>
+                    <label><input type="checkbox" name="tipo_eval[]" value="final">Final</label>
+                </div>
+
+                <div class="checkbox-group">
+                    <p>Metodología de evaluación:</p>
+                    <label><input type="checkbox" name="metod_eval[]" value="oral_ind">Oral individual</label>
+                    <label><input type="checkbox" name="metod_eval[]" value="oral_grup">Oral grupal</label>
+                    <label><input type="checkbox" name="metod_eval[]" value="esc_ind">Escrita individual</label>
+                    <label><input type="checkbox" name="metod_eval[]" value="esc_grup">Escrita grupal</label>
+                    <label><input type="checkbox" name="metod_eval[]" value="informes">Informes o monografías</label>
+                    <label><input type="checkbox" name="metod_eval[]" value="otra">Otra</label>
+                </div>
+
+                <label>Criterios de evaluación:<textarea></textarea></label>
+
+                <fieldset class="sub">
+                    <legend>Régimen de aprobación</legend>
+                    <label>Alumnos promocionales:<textarea></textarea></label>
+                    <label>Alumnos regulares:<textarea></textarea></label>
+                    <label>Alumnos libres:<textarea></textarea></label>
+                </fieldset>
+            </fieldset>
+
+            <fieldset class="sub">
+                <legend>4. Bibliografía</legend>
+                <label>Bibliografía básica:<textarea></textarea></label>
+                <label>Bibliografía complementaria:<textarea></textarea></label>
+            </fieldset>
+        </fieldset>
+
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>

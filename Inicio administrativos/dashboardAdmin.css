@@ -1,0 +1,231 @@
+/* Estilos base */
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f7f9fc;
+  color: #333;
+  margin: 0;
+  padding: 2rem;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+}
+
+h2, h3 {
+  color: #2c3e50;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #555;
+  font-size: 1.1rem;
+}
+
+/* Encabezado del departamento */
+.department-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.action-btn {
+  padding: 0.5rem 1rem;
+  background-color: #e9ecef;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.action-btn:hover {
+  background-color: #d6d8db;
+}
+
+/* Lista de carreras y materias */
+.career-list, .nested {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.career-list > li {
+  margin-bottom: 1.5rem;
+}
+
+.toggle {
+  background: none;
+  color: inherit;
+  padding: 0.7rem 1rem;
+  font: inherit;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease;
+  border-radius: 4px;
+}
+
+.toggle:hover {
+  background-color: #f5f5f5;
+}
+
+.toggle::after {
+  content: "+";
+  font-size: 1.2rem;
+}
+
+.toggle.active::after {
+  content: "-";
+}
+
+/* Carrera */
+.career-toggle {
+  font-weight: 600;
+  color: #2980b9;
+  padding-left: 1rem;
+  border-left: 4px solid #3498db;
+  background-color: #f5fafd;
+}
+
+.career-toggle:hover {
+  background-color: #e1f0f8;
+}
+
+/* Materia */
+.subject-item {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 1rem;
+  margin-left: 2rem;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.paac-checkbox {
+  margin-right: 0.5rem;
+}
+
+.subject-toggle {
+  font-weight: 500;
+  color: #555;
+  padding: 0.5rem 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.subject-options {
+  margin-left: 1.5rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.paac-version {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.current-paac {
+  color: #27ae60;
+  font-weight: 500;
+}
+
+.paac-status {
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  font-size: 0.85rem;
+}
+
+.paac-status.pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.paac-status.in-review {
+  background-color: #cce5ff;
+  color: #004085;
+}
+
+.paac-status.approved {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+/* Formulario de aprobación */
+.approval-form {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  border-left: 4px solid #2c3e50;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.approve-btn {
+  display: block;
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 1rem;
+}
+
+.approve-btn:hover {
+  background-color: #218838;
+}
+
+/* Estado oculto */
+.hidden {
+  display: none;
+}

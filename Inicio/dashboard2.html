@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Panel del Profesor</title>
+  <link rel="stylesheet" href="dashboard2.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Panel del Profesor</h1>
+    <p class="intro">Seleccione un PAAC para editar o visualizar.</p>
+
+    <ul class="sede-list">
+      <li>
+        <button class="toggle sede-toggle">Sede Capital</button>
+        <ul class="nested hidden">
+          <li>
+            <button class="toggle dept-toggle">Departamento de Ciencias Exactas</button>
+            <ul class="nested hidden">
+              <li>
+                <button class="toggle career-toggle">Licenciatura en Sistemas de Información</button>
+                <ul class="nested hidden">
+                  <li>
+                    <button class="toggle subject-toggle">Algoritmos y Estructuras de Datos</button>
+                    <div class="subject-container hidden">
+                      <ul class="subject-options">
+                        <li><a href="form.html" class="current-paac">PAAC Actual (2024)</a></li>
+                        <li>
+                          <button class="toggle historic-toggle">PAAC Históricos</button>
+                          <ul class="nested hidden">
+                            <li><a href="form.html">PAAC 2023</a></li>
+                            <li><a href="formRevision.html">PAAC 2022</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <button class="toggle subject-toggle">Base de Datos</button>
+                    <div class="subject-container hidden">
+                      <ul class="subject-options">
+                        <li><a href="form.html" class="current-paac">PAAC Actual (2024)</a></li>
+                        <li>
+                          <button class="toggle historic-toggle">PAAC Históricos</button>
+                          <ul class="nested hidden">
+                            <li><a href="form.html">PAAC 2023</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <button class="toggle career-toggle">Profesorado en Matemática</button>
+                <ul class="nested hidden">
+                  <li>
+                    <button class="toggle subject-toggle">Análisis Matemático I</button>
+                    <div class="subject-container hidden">
+                      <ul class="subject-options">
+                        <li><a href="form.html" class="current-paac">PAAC Actual (2024)</a></li>
+                        <li>
+                          <button class="toggle historic-toggle">PAAC Históricos</button>
+                          <ul class="nested hidden">
+                            <li><a href="form.html">PAAC 2023</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <button class="toggle dept-toggle">Departamento de Ciencias Humanas</button>
+            <ul class="nested hidden">
+              <li>
+                <button class="toggle career-toggle">Profesorado en Historia</button>
+                <ul class="nested hidden">
+                  <li>
+                    <button class="toggle subject-toggle">Historia Argentina</button>
+                    <div class="subject-container hidden">
+                      <ul class="subject-options">
+                        <li><a href="form.html" class="current-paac">PAAC Actual (2024)</a></li>
+                        <li>
+                          <button class="toggle historic-toggle">PAAC Históricos</button>
+                          <ul class="nested hidden">
+                            <li><a href="form.html">PAAC 2023</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </main>
+
+  <script>
+    document.querySelectorAll('.toggle').forEach(button => {
+      button.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const container = button.nextElementSibling;
+        container.classList.toggle('hidden');
+        button.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>
