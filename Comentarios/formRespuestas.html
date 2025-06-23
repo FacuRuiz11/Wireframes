@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Revisión PAAC - Respuestas a Comentarios</title>
+    <link rel="stylesheet" href="formRespuestasStyle.css">
+</head>
+<body>
+    <form>
+        <h1>Revisión PAAC - Respuestas a Comentarios</h1>
+
+        <fieldset>
+            <legend>Parte A: Aspectos generales</legend>
+
+            <div class="fixed-field">
+                <strong>Sede/Delegación:</strong> Sede Capital
+            </div>
+            
+            <div class="fixed-field">
+                <strong>Departamento académico:</strong> Ciencias Exactas
+            </div>
+            
+            <div class="fixed-field">
+                <strong>Carrera:</strong> Licenciatura en Sistemas de Información
+            </div>
+            
+            <div class="fixed-field">
+                <strong>Asignatura:</strong> Algoritmos y Estructuras de Datos
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>1. Fundamentación</legend>
+
+            <fieldset class="sub">
+                <legend>a. Introducción</legend>
+                <div class="fixed-field">
+                    <strong>Importancia de la asignatura en el plan de estudios:</strong>
+                    <div>Esta asignatura es fundamental en la formación de los estudiantes ya que provee las bases teóricas y prácticas para el desarrollo de software eficiente.</div>
+                    <div class="received-comment">
+                        <strong>Comentario del evaluador:</strong> 
+                        <div>Considerar incluir ejemplos concretos de aplicaciones en la industria.</div>
+                        <div class="comment-response">
+                            <textarea class="response-text" placeholder="Escriba su respuesta aquí..."></textarea>
+                            <button type="button" class="reply-btn">Responder</button>
+                            <button type="button" class="corrected-btn">Marcar como corregido</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="fixed-field">
+                    <strong>Relación con el perfil profesional esperado:</strong>
+                    <div>Los conocimientos adquiridos son esenciales para el desempeño profesional en desarrollo de software, análisis de sistemas y gestión de bases de datos.</div>
+                    <div class="received-comment">
+                        <strong>Comentario del evaluador:</strong> 
+                        <div>Sería útil mencionar específicamente qué tecnologías usan estas competencias.</div>
+                        <div class="response-display">
+                            <strong>Su respuesta:</strong> Se ha actualizado el texto para mencionar Python, Java y SQL como tecnologías principales.
+                        </div>
+                        <div class="comment-response">
+                            <button type="button" class="corrected-btn corrected">Corregido ✓</button>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </fieldset>
+
+        <fieldset>
+            <legend>2. Objetivos</legend>
+            <div class="fixed-field">
+                <strong>Objetivos de la cátedra:</strong>
+                <div>Que los estudiantes dominen los conceptos fundamentales de algoritmos y estructuras de datos, y sean capaces de aplicarlos en la resolución de problemas.</div>
+                <div class="received-comment">
+                    <strong>Comentario del evaluador:</strong> 
+                    <div>Falta claridad en cómo se medirá el dominio de estos conceptos.</div>
+                    <div class="comment-response">
+                        <textarea class="response-text" placeholder="Escriba su respuesta aquí..."></textarea>
+                        <button type="button" class="reply-btn">Responder</button>
+                        <button type="button" class="corrected-btn">Marcar como corregido</button>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>3. Metodología de la enseñanza</legend>
+            <div class="fixed-field">
+                <strong>Recursos didácticos:</strong>
+                <div>Guía de ejercicios, Guía de trabajos prácticos, Apuntes ad-hoc, Presentaciones, Bibliografía, Plataforma virtual</div>
+                <div class="received-comment">
+                    <strong>Comentario del evaluador:</strong> 
+                    <div>¿Están disponibles estos recursos para los estudiantes con anticipación?</div>
+                    <div class="response-display">
+                        <strong>Su respuesta:</strong> Sí, todos los recursos se publican al menos una semana antes en la plataforma virtual.
+                    </div>
+                    <div class="comment-response">
+                        <button type="button" class="corrected-btn corrected">Corregido ✓</button>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+
+        <div class="final-controls">
+            <button type="button" id="finish-responses" class="finish-btn">Terminar revisión</button>
+        </div>
+    </form>
+
+    <script>
+        // Funcionalidad para responder comentarios
+        document.querySelectorAll('.reply-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const responseText = this.previousElementSibling.value;
+                if (responseText.trim() !== '') {
+                    const responseDisplay = document.createElement('div');
+                    responseDisplay.className = 'response-display';
+                    responseDisplay.innerHTML = `<strong>Su respuesta:</strong> ${responseText}`;
+                    
+                    const receivedComment = this.closest('.received-comment');
+                    receivedComment.insertBefore(responseDisplay, this.closest('.comment-response'));
+                    
+                    this.previousElementSibling.value = '';
+                }
+            });
+        });
+
+        // Funcionalidad para marcar como corregido
+        document.querySelectorAll('.corrected-btn:not(.corrected)').forEach(btn => {
+            btn.addEventListener('click', function() {
+                this.textContent = 'Corregido ✓';
+                this.classList.add('corrected');
+                this.style.backgroundColor = '#2ecc71';
+                
+                // Ocultar el área de respuesta si está visible
+                const responseTextarea = this.parentElement.querySelector('.response-text');
+                if (responseTextarea && responseTextarea.value === '') {
+                    responseTextarea.style.display = 'none';
+                }
+                
+                const replyBtn = this.parentElement.querySelector('.reply-btn');
+                if (replyBtn) {
+                    replyBtn.style.display = 'none';
+                }
+            });
+        });
+
+        // Funcionalidad para terminar revisión
+        document.getElementById('finish-responses').addEventListener('click', function() {
+            if (confirm('¿Está seguro que desea terminar la revisión? Esta acción no se puede deshacer.')) {
+                alert('Revisión completada correctamente');
+                // Aquí iría la lógica para enviar los datos al servidor
+            }
+        });
+    </script>
+</body>
+</html>
