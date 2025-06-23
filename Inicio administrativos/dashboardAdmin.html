@@ -26,16 +26,20 @@
                     <div class="subject-container">
                       <ul class="subject-options">
                         <li class="approval-status">
-                          <span class="status up-approved">Unidad Pedagógica: Aprobado ✓</span>
+                          <span class="status up-approved">Unidad Pedagógica: Pendiente de aprobacion ✓</span>
                         </li>
                         <li class="approval-status">
-                          <span class="status dc-approved">Dirección Carrera: Aprobado ✓</span>
+                          <span class="status dc-approved">Dirección Carrera: Pendiente de aprobacion ✓</span>
                         </li>
                         <li>
                           <a href="formRevision.html" class="current-paac">PAAC Actual (2024)</a>
                         </li>
-                        <li>
-                          <button class="select-btn">Seleccionar para resolución</button>
+                        <li class="checkbox-item">
+                          <label class="checkbox-label">
+                            <input type="checkbox" class="paac-checkbox" checked>
+                            <span class="checkmark"></span>
+                            Seleccionar para resolución
+                          </label>
                         </li>
                       </ul>
                     </div>
@@ -47,37 +51,20 @@
                     <div class="subject-container">
                       <ul class="subject-options">
                         <li class="approval-status">
-                          <span class="status up-approved">Unidad Pedagógica: Aprobado ✓</span>
+                          <span class="status up-approved">Unidad Pedagógica: Pendiente de aprobacion ✓</span>
                         </li>
                         <li class="approval-status">
-                          <span class="status dc-pending">Dirección Carrera: Pendiente ✗</span>
+                          <span class="status dc-pending">Dirección Carrera: No aprobado ✗</span>
                         </li>
                         <li>
                           <a href="formRevision.html" class="current-paac">PAAC Actual (2024)</a>
                         </li>
-                        <li>
-                          <button class="select-btn disabled" disabled>No disponible</button>
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-                  
-                  <!-- Materia 3 -->
-                  <li>
-                    <button class="toggle subject-toggle active">Paradigmas de Programación</button>
-                    <div class="subject-container">
-                      <ul class="subject-options">
-                        <li class="approval-status">
-                          <span class="status up-approved">Unidad Pedagógica: Aprobado ✓</span>
-                        </li>
-                        <li class="approval-status">
-                          <span class="status dc-approved">Dirección Carrera: Aprobado ✓</span>
-                        </li>
-                        <li>
-                          <a href="formRevision.html" class="current-paac">PAAC Actual (2024)</a>
-                        </li>
-                        <li>
-                          <button class="select-btn">Seleccionar para resolución</button>
+                        <li class="checkbox-item">
+                          <label class="checkbox-label disabled">
+                            <input type="checkbox" class="paac-checkbox" disabled>
+                            <span class="checkmark"></span>
+                            No disponible
+                          </label>
                         </li>
                       </ul>
                     </div>
@@ -100,28 +87,24 @@
         <label for="resolutionDate">Fecha:</label>
         <input type="date" id="resolutionDate">
       </div>
-      <button id="generateResolution" class="generate-btn">Generar Resolución</button>
+      <button id="generateResolution" class="generate-btn">Aprobar</button>
     </div>
   </main>
 
   <script>
-    // Manejar selección de materias
-    document.querySelectorAll('.select-btn:not(.disabled)').forEach(btn => {
-      btn.addEventListener('click', function() {
-        this.classList.toggle('selected');
-        if (this.classList.contains('selected')) {
-          this.textContent = 'Seleccionado ✓';
-          this.style.backgroundColor = '#27ae60';
-        } else {
-          this.textContent = 'Seleccionar para resolución';
-          this.style.backgroundColor = '#3498db';
-        }
+    // Manejar toggles de navegación
+    document.querySelectorAll('.toggle').forEach(button => {
+      button.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const container = button.nextElementSibling;
+        container.classList.toggle('hidden');
+        button.classList.toggle('active');
       });
     });
 
     // Generar resolución
     document.getElementById('generateResolution').addEventListener('click', function() {
-      const selectedCount = document.querySelectorAll('.select-btn.selected').length;
+      const selectedCount = document.querySelectorAll('.paac-checkbox:checked:not(:disabled)').length;
       const resolutionNumber = document.getElementById('resolutionNumber').value;
       const resolutionDate = document.getElementById('resolutionDate').value;
       
@@ -139,16 +122,6 @@
         alert(`Resolución ${resolutionNumber} generada correctamente para fecha ${resolutionDate}`);
         // Aquí iría la lógica para enviar los datos al servidor
       }
-    });
-
-    // Manejar toggles de navegación
-    document.querySelectorAll('.toggle').forEach(button => {
-      button.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const container = button.nextElementSibling;
-        container.classList.toggle('hidden');
-        button.classList.toggle('active');
-      });
     });
   </script>
 </body>
