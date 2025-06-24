@@ -21,6 +21,7 @@ Características Principales
     📄 Asignación de resoluciones de aprobación
 
 Wireframes
+
 Estos wireframes buscan simular a modo de prototipo las distintas interfaces principales del sistema para los distintos actores del mismo, o sea, los profesores, unidad pedagogica, direccion de carrera y personal administrativo.
 Buscan simular las funciones principales necesarias para el desarrollo del proceso.
 
